@@ -1,0 +1,22 @@
+<p>forms works!</p>
+
+<div class="container">
+    template driven form
+    <div class="row">
+       
+        <div class="col-md-6">
+            <form #loginForm="ngForm" (ngSubmit)="userlogin(loginForm.value)">
+                <input type="text" placeholder="name" name="name" ngModel>
+                <br><br>
+                <input type="email" placeholder="email" name="email" ngModel>
+                <br><br>
+                <input type="text" placeholder="password" name="password"  ngModel>
+                <br>
+                <button>Login</button>
+               
+            </form>
+        </div>
+
+        
+    </div>
+</div>
