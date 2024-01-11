@@ -13,6 +13,7 @@ import { EmpldetailsComponent } from './empldetails/empldetails.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserComponent,
     EmplistComponent,
     EmpldetailsComponent,
-    FormsComponent
+    FormsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
