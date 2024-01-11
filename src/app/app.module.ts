@@ -12,6 +12,7 @@ import { EmplistComponent } from './emplist/emplist.component';
 import { EmpldetailsComponent } from './empldetails/empldetails.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
