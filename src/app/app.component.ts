@@ -18,7 +18,7 @@ user={
   name:'vaishnav',
   job:'intern'
 }
-
+fillname:any; 
   fullname='vaishnav pradeep ghangale'
 
   showalert(){
