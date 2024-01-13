@@ -18,7 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {  MatButtonModule } from '@angular/material/button';
-
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import {  MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule
+    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
