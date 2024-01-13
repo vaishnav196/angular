@@ -31,5 +31,8 @@ ngOnInit(): void {
    
    })
 }
+onformsubmit(){
+  console.log(this.RForm)
+}
 
 }
