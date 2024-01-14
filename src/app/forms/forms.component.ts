@@ -53,21 +53,42 @@ export class FormsComponent implements OnInit {
 
   onformsubmit() {
     // console.log(this.RForm)
+
+    // const pincode = this.pincodeForm.get('pincode').value;
+    // // Call API to validate pincode and fetch branch name
     const pincode = this.RForm.get('address.pincode').value;
+     this.fetchBranchName(pincode);
 
-    this.Pin.validatePinCode(pincode).subscribe((isValid) => {
-      if (isValid) {
-        this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
-        console.log('pin code is invalid');
-      } else {
-        // Pin code is valid, you can proceed with your logic here
-        console.log('Pin code is valid');
-        console.log(isValid);
+    // this.Pin.validatePinCode(pincode).subscribe((isValid) => {
+    //   if (isValid) {
+    //     this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
+    //     console.log('pin code is invalid');
+    //   } else {
+    //     // Pin code is valid, you can proceed with your logic here
+    //     console.log('Pin code is valid');
+    //     console.log(isValid);
+    //   }
+
+    //   this.branch=isValid
+    //   console.log(this.branch)
+    // });
+  }
+  
+
+
+  fetchBranchName(pincode: string) {
+    const apiUrl = `https://api.postalpincode.in/pincode`;
+    this.http.get(apiUrl).subscribe(
+      (response: any) => {
+        const branch = response; // Adjust based on the actual API response
+        console.log(`Branch Name: ${branch}`);//
+        // Update UI with branch name
+      },
+      (error) => {
+        console.error(error);
+        // Handle errors
       }
-
-      this.branch=isValid
-      console.log(this.branch)
-    });
+    );
   }
   
 }

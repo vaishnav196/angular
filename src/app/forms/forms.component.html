@@ -83,6 +83,9 @@
               <small *ngIf="RForm.get('address.pincode').hasError('invalidPincode')">
                 Invalid Pin Code. Please enter a valid pin code.
               </small>
+              <small *ngFor="let x of branch">
+                Invalid Pin Code. Please enter a valid pin code.
+              </small>
 
               
               
