@@ -20,7 +20,7 @@ export class FormsComponent implements OnInit {
 // }
 // fillname:any;
 
-branch:any[]=[];
+branch:any={};
 constructor(private Pin:PincodeService,private http:HttpClient){
 
 }
@@ -51,7 +51,7 @@ ngOnInit(): void {
 }
 
 onformsubmit(){
-  console.log(this.RForm)
+ // console.log(this.RForm)
    const pincode=this.RForm.get('address.pincode').value
   //  console.log(Pincode)
 this.Pin.validatePinCode(pincode).subscribe((isValid)=>{
@@ -65,7 +65,8 @@ this.Pin.validatePinCode(pincode).subscribe((isValid)=>{
    // console.log('Pin code is valid');
    console.log(isValid)
 
-this.branch.push(isValid);
+ this.branch=isValid
+//  console.log(this.branch)
 
 
  
