@@ -10,16 +10,19 @@ export class PincodeService {
   //  constructor() { }
 
 
-  private apiUrl = 'https://api.postalpincode.in/pincode';
+  private apiUrl = `https://api.postalpincode.in/pincode`;
+ 
 
   constructor(private http: HttpClient) {
    
   }
 
-  validatePinCode(pincode: string) {
+  validatePinCode(pincode: string){
     const url = `${this.apiUrl}/${pincode}`;
     return this.http.get(url);
+    
   }
+ 
 
 
 }
