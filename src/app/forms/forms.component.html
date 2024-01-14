@@ -77,6 +77,12 @@
                 <mat-label>State</mat-label>
                 <input matInput placeholder="Ex. California" formControlName="state">
             </mat-form-field>
+            <small *ngIf="RForm.get('address.pincode').hasError('pattern')">
+                Pin code must be 6 digits.
+              </small>
+              <small *ngIf="RForm.get('address.pincode').hasError('invalidPincode')">
+                Invalid Pin Code. Please enter a valid pin code.
+              </small>
             <mat-form-field class="example-full-width">
                 <mat-label>Postal Code</mat-label>
                 <input matInput placeholder="" value="" formControlName="pincode">

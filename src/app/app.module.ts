@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule ,Validator} from '@angular/forms';
 import {  MatButtonModule } from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -40,7 +41,7 @@ import {MatRadioModule} from '@angular/material/radio';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule,MatRadioModule,
+    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule,MatRadioModule,  HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

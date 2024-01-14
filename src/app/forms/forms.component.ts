@@ -4,6 +4,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 // import {MatDividerModule} from '@angular/material/divider';
 // import {MatButtonModule} from '@angular/material/button';
 import { CustomValidators } from '../Validators/nospaceallowed.validators';
+import { PincodeService } from '../services/pincode.service';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -16,7 +19,9 @@ export class FormsComponent implements OnInit {
 //   console.log(item)
 // }
 // fillname:any;
+constructor(private Pin:PincodeService,private http:HttpClient){
 
+}
 RForm: FormGroup;
 ngOnInit(): void {
    this.RForm=new FormGroup({
@@ -30,7 +35,7 @@ ngOnInit(): void {
       add2:new FormControl(null),
       city:new FormControl(null),
       state:new FormControl(null),
-      pincode:new FormControl(null),
+      pincode:new FormControl(null,[Validators.required,Validators.pattern(/^\d{6}$/)]),
       country:new FormControl(null),
     }),
     // add1:new FormControl(null),
@@ -44,6 +49,17 @@ ngOnInit(): void {
 }
 onformsubmit(){
   console.log(this.RForm)
+   const Pincode=this.RForm.get('address.pincode').value
+  //  console.log(Pincode)
+this.Pin.validatePinCode(Pincode).subscribe((isValid)=>{
+  if (!isValid) {
+    this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
+    //  console.log('pin code is valid')
+  } else {
+    // Pin code is valid, you can proceed with your logic here
+    //console.log('Pin code is valid');
+  }
+})
 }
 
 }
