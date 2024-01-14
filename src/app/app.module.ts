@@ -16,9 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form/form.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule ,Validator} from '@angular/forms';
 import {  MatButtonModule } from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
+
+
 
 
 @NgModule({
@@ -38,7 +40,7 @@ import {MatRadioModule} from '@angular/material/radio';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule,MatRadioModule
+    BrowserAnimationsModule,MatFormFieldModule, MatInputModule,ReactiveFormsModule,MatButtonModule,MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,4 +11,9 @@
   td {
     padding-right: 8px;
   }
+
+  small{
+    color: red;
+    font-weight: bold;
+  }
   
