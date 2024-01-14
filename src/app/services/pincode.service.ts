@@ -10,7 +10,7 @@ export class PincodeService {
   //  constructor() { }
 
 
-  private apiUrl = 'https://api.postalpincode.in/pincode/{PINCODE}';
+  private apiUrl = 'https://api.postalpincode.in/pincode';
 
   constructor(private http: HttpClient) {
    
@@ -20,6 +20,6 @@ export class PincodeService {
     const url = `${this.apiUrl}/${pincode}`;
     return this.http.get(url);
   }
- 
+
 
 }

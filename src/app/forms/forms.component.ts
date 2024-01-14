@@ -52,12 +52,13 @@ onformsubmit(){
    const Pincode=this.RForm.get('address.pincode').value
   //  console.log(Pincode)
 this.Pin.validatePinCode(Pincode).subscribe((isValid)=>{
-  if (!isValid) {
+  if (isValid) {
     this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
-    //  console.log('pin code is valid')
+      console.log('pin code is invalid')
   } else {
     // Pin code is valid, you can proceed with your logic here
-    //console.log('Pin code is valid');
+    console.log('Pin code is valid');
+    // console.log('')
   }
 })
 }
