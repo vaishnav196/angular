@@ -22,7 +22,21 @@ export class PincodeService {
     return this.http.get(url);
     
   }
- 
+  
+  // fetchBranchName(pincode: string) {
+  //   const apiUrl = `https://api.example.com/pincode/${pincode}`;
+  //   this.http.get(apiUrl).subscribe(
+  //     (response: any) => {
+  //       const branchName = response.branchName; // Adjust based on the actual API response
+  //       console.log(`Branch Name: ${branchName}`);
+  //       // Update UI with branch name
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //       // Handle errors
+  //     }
+  //   );
+  // }
 
 
 }
