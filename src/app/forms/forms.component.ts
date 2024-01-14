@@ -56,18 +56,18 @@ export class FormsComponent implements OnInit {
     const pincode = this.RForm.get('address.pincode').value;
 
     this.Pin.validatePinCode(pincode).subscribe((isValid) => {
-      // if (isValid) {
-      //   this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
-      //   console.log('pin code is invalid');
-      // } else {
-      //   // Pin code is valid, you can proceed with your logic here
-      //   console.log('Pin code is valid');
-      //   console.log(isValid);
-      // }
+      if (isValid) {
+        this.RForm.get('address.pincode').setErrors({ invalidPincode: true });
+        console.log('pin code is invalid');
+      } else {
+        // Pin code is valid, you can proceed with your logic here
+        console.log('Pin code is valid');
+        console.log(isValid);
+      }
 
       this.branch=isValid
       console.log(this.branch)
     });
   }
- 
+  
 }
