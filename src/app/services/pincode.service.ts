@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class PincodeService implements OnInit {
 
   //  constructor() { }
-
+postal: any=[]
 
   private apiUrl = `https://api.postalpincode.in/pincode`;
  
@@ -21,9 +21,9 @@ ngOnInit(): void {
 
   validatePinCode(pincode: string){
     const url = `${this.apiUrl}/${pincode}`;
-    return this.http.get(url);
-    
+    return   this.postal=(this.http.get(url));
   }
+
   
   
 
