@@ -80,19 +80,6 @@ export class FormsComponent implements OnInit {
   
 
 
-  // fetchBranchName(pincode: string) {
-  //   const apiUrl = `https://api.postalpincode.in/pincode`;
-  //   this.http.get(apiUrl).subscribe(
-  //     (response) => {
-  //       const branch = response; // Adjust based on the actual API response
-  //       console.log(`Branch Name: ${branch}`);//
-  //       // Update UI with branch name
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //       // Handle errors
-  //     }
-  //   );
-  // }
+
   
 }
