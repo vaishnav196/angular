@@ -69,6 +69,7 @@ export class FormsComponent implements OnInit {
         // Pin code is valid, you can proceed with your logic here
         console.log('Pin code is valid');
         console.log(isValid);
+       // console.log(isValid);
         
       
       }
