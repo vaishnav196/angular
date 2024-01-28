@@ -52,7 +52,7 @@ export class FormsComponent implements OnInit {
   }
 
   onformsubmit() {
-    // console.log(this.RForm)
+     console.log(this.RForm)
 
     // const pincode = this.pincodeForm.get('pincode').value;
     // // Call API to validate pincode and fetch branch name
